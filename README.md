@@ -1,10 +1,10 @@
 # DocTalk
 
-A RAG (Retrieval-Augmented Generation) application that answers questions grounded in an uploaded PDF — built from scratch to benchmark and compare retrieval strategies rather than assuming one approach is best.
+A RAG (Retrieval-Augmented Generation) application that answers questions grounded in an uploaded PDF - built from scratch to benchmark and compare retrieval strategies rather than assuming one approach is best.
 
 ## What it does
 
-Upload any PDF, then ask questions about it in plain English. The system retrieves the most relevant sections of the document and generates an answer using only that retrieved context — it explicitly declines to answer when the document doesn't contain the information, rather than hallucinating from general knowledge.
+Upload any PDF, then ask questions about it in plain English. The system retrieves the most relevant sections of the document and generates an answer using only that retrieved context - it explicitly declines to answer when the document doesn't contain the information, rather than hallucinating from general knowledge.
 
 ## Why this project
 
@@ -19,7 +19,7 @@ Most RAG tutorials stop at "it works." This project instead treats retrieval as 
 | Multi-Query (RAG-Fusion) | 81.82% | ~0.65 |
 | **Hybrid + Semantic Chunking** | **90.91%** | **0.856** |
 
-**Key finding:** chunking strategy had more impact than retrieval algorithm sophistication. Switching from fixed 500-character chunks to larger, paragraph-boundary-respecting chunks (combined with hybrid search) produced the biggest single improvement — bigger than adding BM25 fusion or multi-query rephrasing alone. Multi-query/RAG-Fusion actually underperformed the baseline on this narrow technical document, a useful reminder that more sophisticated techniques aren't universally better — they need to be tested against the actual corpus.
+**Key finding:** chunking strategy had more impact than retrieval algorithm sophistication. Switching from fixed 500-character chunks to larger, paragraph-boundary-respecting chunks (combined with hybrid search) produced the biggest single improvement - bigger than adding BM25 fusion or multi-query rephrasing alone. Multi-query/RAG-Fusion actually underperformed the baseline on this narrow technical document, a useful reminder that more sophisticated techniques aren't universally better - they need to be tested against the actual corpus.
 
 Full write-up: [`backend/results/eval_comparison.md`](backend/results/eval_comparison.md)
 
@@ -68,6 +68,6 @@ python -m app.eval.run_eval
 
 ## Known limitations
 
-- Retrieval quality is sensitive to how closely a question's phrasing matches the document's own language — vague questions on long, dense documents (e.g. legal text) can miss relevant sections that more specific phrasing retrieves correctly.
-- No OCR support — scanned/image-based PDFs won't extract text.
+- Retrieval quality is sensitive to how closely a question's phrasing matches the document's own language - vague questions on long, dense documents (e.g. legal text) can miss relevant sections that more specific phrasing retrieves correctly.
+- No OCR support - scanned/image-based PDFs won't extract text.
 - Multi-query/RAG-Fusion is included as a tested-and-rejected approach for this corpus type, kept in the codebase to show the comparison rather than silently dropped.
