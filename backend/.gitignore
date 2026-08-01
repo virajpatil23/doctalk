@@ -1,0 +1,9 @@
+venv/
+.env
+__pycache__/
+*.pyc
+data/faiss_index/
+data/faiss_index_semantic/
+data/bm25_index.pkl
+data/bm25_index_semantic.pkl
+data/sample_pdfs/

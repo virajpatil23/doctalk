@@ -1,0 +1,90 @@
+[
+  {
+    "question": "What tool is used for OCR in this pipeline?",
+    "expected_keywords": ["Google Vision", "text detection"]
+  },
+  {
+    "question": "How are scanned images and PDFs converted to machine-readable data?",
+    "expected_keywords": ["OCR", "image preprocessing"]
+  },
+  {
+    "question": "What library is used to extract the ICD-10 codebook from PDF?",
+    "expected_keywords": ["PyMuPDF"]
+  },
+  {
+    "question": "How is the ICD-10 codebook structured after extraction?",
+    "expected_keywords": ["CSV", "structured"]
+  },
+  {
+    "question": "What technique is used to extract codes using patterns?",
+    "expected_keywords": ["regular expression", "regex"]
+  },
+  {
+    "question": "What challenges exist in processing clinical text?",
+    "expected_keywords": ["handwritten", "noisy", "abbreviations"]
+  },
+  {
+    "question": "What is ICD-10 used for in this system?",
+    "expected_keywords": ["coding", "billing", "clinical reporting"]
+  },
+  {
+    "question": "Why was a retrieval-based approach chosen instead of classification?",
+    "expected_keywords": ["retrieval", "scalability", "no retraining"]
+  },
+  {
+    "question": "Which transformer models are used to generate semantic embeddings?",
+    "expected_keywords": ["PubMedBERT", "BioBERT"]
+  },
+  {
+    "question": "Why are PubMedBERT and BioBERT suitable for this project?",
+    "expected_keywords": ["biomedical", "clinical text", "domain-specific"]
+  },
+  {
+    "question": "What is the purpose of TF-IDF in the proposed system?",
+    "expected_keywords": ["keyword weighting", "lexical matching", "important terms"]
+  },
+  {
+    "question": "How are TF-IDF and transformer embeddings combined?",
+    "expected_keywords": ["feature fusion", "concatenation", "hybrid vector"]
+  },
+  {
+    "question": "Why is cosine similarity used?",
+    "expected_keywords": ["semantic similarity", "vector comparison"]
+  },
+  {
+    "question": "What is the role of FAISS in the pipeline?",
+    "expected_keywords": ["nearest neighbor", "vector search", "fast retrieval"]
+  },
+  {
+    "question": "What does Top-K retrieval mean?",
+    "expected_keywords": ["top recommendations", "ranking", "similarity"]
+  },
+  {
+    "question": "What explainability features does the system provide?",
+    "expected_keywords": ["chapter", "category", "includes", "excludes"]
+  },
+  {
+    "question": "What evaluation metrics were used to assess the retrieval system?",
+    "expected_keywords": ["Recall@5", "Precision@5", "MRR", "nDCG"]
+  },
+  {
+    "question": "What does Recall@5 measure?",
+    "expected_keywords": ["correct code", "top 5", "retrieved"]
+  },
+  {
+    "question": "Why is Precision@5 relatively low in retrieval systems?",
+    "expected_keywords": ["one correct code", "five recommendations"]
+  },
+  {
+    "question": "What was the Recall@5 achieved by the text retrieval model?",
+    "expected_keywords": ["100%", "Recall@5"]
+  },
+  {
+    "question": "What frontend framework was used to build the application?",
+    "expected_keywords": ["Streamlit"]
+  },
+  {
+    "question": "What future improvements are suggested for the system?",
+    "expected_keywords": ["EHR", "ICD-11", "RAG", "LLM"]
+  }
+]
